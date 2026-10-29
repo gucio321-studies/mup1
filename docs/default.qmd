@@ -1,0 +1,10 @@
+---
+title: "default"
+---
+
+# Wykres
+
+```{python}
+{{< include ../src/mup1/__init__.py >}}
+main()
+```
