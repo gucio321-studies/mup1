@@ -20,3 +20,8 @@ jobs:
         working-directory: docs/
         run: |
           uv run quarto render
+      - name: Upload artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: output-${{ github.sha }}
+          path: docs/default.pdf
