@@ -13,7 +13,8 @@ def main() -> None:
     advector = VectorField(**common, data=(np.full(shape=x.size+1, fill_value=.25),))
     
     fig, ax = plt.subplots()
-    ax.step(x, advectee.get())
+    ax.step(x, advectee.get(), where='mid')
+    ax.axvline(0, color='red')
 
     fig.savefig("drawing.svg", format='svg')
     plt.close(fig)
