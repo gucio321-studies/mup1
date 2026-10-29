@@ -1,5 +1,7 @@
 name: Deply
 
+on: push
+
 jobs:
   deployment:
     runs-on: ubuntu-latest
