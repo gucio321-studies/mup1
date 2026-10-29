@@ -14,8 +14,8 @@ jobs:
           working-directory: "docs/"
       - name: Install Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-      - name: Install tinytex
-        run: quarto install tinytex
+        with:
+          tinytex: true
       - name: Build PDF
         working-directory: docs/
         run: |
